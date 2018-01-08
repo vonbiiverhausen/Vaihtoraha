@@ -35,14 +35,13 @@ public class Vaihtoraha {
             }
 
             // jos summasta jäi jotain yli, niin tulostetaan ruudulle
-            if (summa != 0) {
+            if (summa > 0.01) {
                 tulos += String.format("Yli jäi %.2f euroa\n", summa);
             }
 
         } catch (Exception e) {
             System.out.println(e);
         }
-
         return tulos;
     }
 
