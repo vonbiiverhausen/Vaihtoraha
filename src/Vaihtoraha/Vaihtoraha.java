@@ -24,7 +24,6 @@ public class Vaihtoraha {
                 summa *= -1;
             }
             for (int i = rahanArvot.length - 1; i >= 0; i--) {
-                System.out.println(rahanArvot[i]);
                 if ((int) (summa / rahanArvot[i]) > 0) { // jos seteliä / kolikkoa ei tarvita, niin sitä ei tulosteta
                     if (rahanArvot[i] < 1) {
                         tulos += String.format("%d kpl %.2f euron seteliä/kolikkoa\n", (int) (summa / rahanArvot[i]), rahanArvot[i]);
