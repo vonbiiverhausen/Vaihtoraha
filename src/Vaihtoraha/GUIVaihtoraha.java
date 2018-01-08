@@ -20,15 +20,15 @@ public class GUIVaihtoraha extends JFrame {
 
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        lbSumma = new javax.swing.JLabel();
-        tfSumma = new javax.swing.JTextField();
-        btLaske = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        taTulos = new javax.swing.JTextArea();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jPanel1 = new JPanel();
+        lbSumma = new JLabel();
+        tfSumma = new JTextField();
+        btLaske = new JButton();
+        jSeparator1 = new JSeparator();
+        jScrollPane1 = new JScrollPane();
+        taTulos = new JTextArea();
+        jMenuBar1 = new JMenuBar();
+        jMenu1 = new JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 

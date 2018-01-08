@@ -17,14 +17,14 @@ public class Vaihtoraha {
         double summa;
         try {
             if (syote.contains(",")) {
-                syote = syote.replace(',', '.');
+                syote = syote.replace(',', '.');    // vaihdetaan pilkut pisteiksi
             }
             summa = Double.parseDouble(syote);
             if (summa < 0) {
-                summa *= -1;
+                summa *= -1;    // jos arvo on negatiivinen, niin muunnetaan positiiviseksi
             }
             for (int i = rahanArvot.length - 1; i >= 0; i--) {
-                if ((int) (summa / rahanArvot[i]) > 0) { // jos seteliä / kolikkoa ei tarvita, niin sitä ei tulosteta
+                if ((int) (summa / rahanArvot[i]) > 0) { // jos seteliä / kolikkoa ei tarvita vaihtorahassa, niin sitä ei tulosteta
                     if (rahanArvot[i] < 1) {
                         tulos += String.format("%d kpl %.2f euron seteliä/kolikkoa\n", (int) (summa / rahanArvot[i]), rahanArvot[i]);
                     } else {
