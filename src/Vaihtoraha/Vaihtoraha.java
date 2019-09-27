@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Vaihtoraha {
 
     // Seteleiden ja kolikoiden arvot euroina
+    // Huomioi että järjestyksellä on väliä. Varmista että arvot ovat kasvavassa järjestyksessä
     static double[] rahanArvot = {0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200, 500};
 
     private static String btLaskeActionPerformed(String syote) {
@@ -23,8 +24,13 @@ public class Vaihtoraha {
             if (summa < 0) {
                 summa *= -1;    // jos arvo on negatiivinen, niin muunnetaan positiiviseksi
             }
+
+            // Läpikäydään eri rahojen arvot suurimmaste pienimpään
             for (int i = rahanArvot.length - 1; i >= 0; i--) {
-                if ((int) (summa / rahanArvot[i]) > 0) { // jos seteliä / kolikkoa ei tarvita vaihtorahassa, niin sitä ei tulosteta
+
+                // Katsotaan tarvitaanko seteliä / kolikkoa. Esim. 300 eurossa on nolla 500 euron seteliä.
+                // Jos seteliä / kolikkoa ei tarvita vaihtorahassa, niin sitä ei tulosteta
+                if ((int) (summa / rahanArvot[i]) > 0) {
                     if (rahanArvot[i] < 1) {
                         tulos += String.format("%d kpl %.2f euron seteliä/kolikkoa\n", (int) (summa / rahanArvot[i]), rahanArvot[i]);
                     } else {
